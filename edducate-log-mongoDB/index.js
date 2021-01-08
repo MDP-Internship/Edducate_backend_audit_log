@@ -2,12 +2,13 @@ import { rabbitMQconsumer } from "./controller/rabbit_mq_consumer";
 import mongoose from "mongoose";
 
 
+
 connect_rabbitmq()
 
 async function connect_rabbitmq() {
   
   try {
-    let channelName = "logChannel";
+    var channelName = 'logChannel';
     //Connect MongoDB
     let uri =
       "mongodb+srv://aoguz:aoguz123456@cluster0.0elvz.mongodb.net/<dbname>?retryWrites=true&w=majority";
@@ -23,4 +24,4 @@ async function connect_rabbitmq() {
   } catch (error) {
     throw error;
   }
-}
+} 
