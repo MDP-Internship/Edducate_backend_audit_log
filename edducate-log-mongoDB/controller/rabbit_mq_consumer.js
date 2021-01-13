@@ -13,7 +13,7 @@ export async function rabbitMQconsumer(channelName) {
 
     (await channel).consume(channelName, (message) => {
       const messageInfo = JSON.parse(message.content.toString());
-      console.log(messageInfo);
+    
       const parseData = JSON.parse(messageInfo);
    
       //Write MongoDB
