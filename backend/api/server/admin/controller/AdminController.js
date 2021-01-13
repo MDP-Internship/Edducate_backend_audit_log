@@ -26,7 +26,7 @@ class AdminController {
       })
     }
 
-    await connect_rabbitmq('logChannel', reqFullBody)
+    await connect_rabbitmq('logChannel', JSON.stringify(reqFullBody))
 
     res.json({ type: true, message: "güncelleme işlemi başarılı" })
   }
